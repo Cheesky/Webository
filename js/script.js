@@ -14,13 +14,15 @@ function reverse(){
         document.getElementById("label-input").innerHTML = "Celcius (&deg;C)";
         document.getElementById("label-output").innerHTML = "Fahrenheit (&deg;F)";
     }
-    return opsi;
+
+    return convert();
 }
 function convert(){
     if(opsi === true){
         // Fahrenheit to Celcius
         input = document.getElementById("input").value;
         output = (input - 32)/1.8;
+        output = Math.round(output).toFixed(1);
         document.getElementById("result-sidepanel").innerHTML = output;
         document.getElementById("result").innerHTML = output;
         document.getElementById("calculate-detail").innerHTML = "S<sub>(&deg;C)</sub> = (S<sub>(&deg;F)</sub> - 32) / 1.8<br>"+
@@ -32,6 +34,7 @@ function convert(){
         // Celcius to Fahrenheit
         input = document.getElementById("input").value;
         output = (input * 1.8)+32;
+        output = Math.round(output).toFixed(1);
         document.getElementById("result-sidepanel").innerHTML = output;
         document.getElementById("result").innerHTML = output;
         document.getElementById("calculate-detail").innerHTML = "S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1,8) + 32 <br>"+
