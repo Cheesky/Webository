@@ -43,3 +43,12 @@ function convert(){
                                                                 "S<sub>(&deg;F)</sub> = ("+(input * 1.8 + 32)+")";
     }
 }
+if(output <= -51){
+    // Unearthly Cold color rgba(60,49,151,255)
+}
+else if(output<=-21){
+    //Extreme Cold color rgba(38,0,207,255)
+}
+else if(output <=0){
+    //Severe Cold rgba(71,98,251,255)
+}
