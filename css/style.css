@@ -94,6 +94,10 @@ td {
     color: white;
 }
 
+.infopanel {
+    text-align:center;
+}
+
 .formula {
     font-style: italic;
     font-size: xx-large;
